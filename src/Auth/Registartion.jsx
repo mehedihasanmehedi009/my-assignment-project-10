@@ -16,25 +16,37 @@ const Register = () => {
     const photoURL = event.target.photoURL.value;
     const email = event.target.email.value;
     const password = event.target.password.value;
+    // Password Validation
+if (password.length < 6) {
+  toast.error(" Password must be at least 6 characters long.");
+  return;
+}
 
-    toast.loading("Creating user...", { id: "create-user" });
+if (!/[A-Z]/.test(password)) {
+  toast.error(" Password must contain at least one uppercase letter.");
+  return;
+}
+
+if (!/[a-z]/.test(password)) {
+  toast.error(" Password must contain at least one lowercase letter.");
+  return;
+}
 
     createUser(email, password)
       .then((result) => {
         console.log(result.user);
         updateUserProfile(displayName, photoURL);
-        toast.success("User created successfully!", { id: "create-user" });
+        toast.success("User created successfully!");
         event.target.reset();
         navigate("/");
       })
       .catch((error) => {
         console.error(error);
-        toast.error(error.message, { id: "create-user" });
+        toast.error();
       });
   };
 
   const handleGoogleSignIn = () => {
-    toast.loading("Creating user...", );
     signInWithGoogle()
       .then((result) => {
         console.log(result.user);
@@ -43,7 +55,7 @@ const Register = () => {
       })
       .catch((error) => {
         console.error(error);
-        toast.error(error.message, { id: "create-user" });
+        toast.error();
       });
   };
 

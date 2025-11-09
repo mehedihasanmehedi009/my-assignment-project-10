@@ -1,14 +1,12 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
+ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const videos = [
-  "https://cdn.dribbble.com/userupload/44953456/file/76723a83e127562547a28df5001d257b.webm",
-  "https://cdn.dribbble.com/userupload/16569515/file/original-d99071d642c8efd87400222a0c344e1a.mp4",
-  "https://cdn.dribbble.com/userupload/44360845/file/4988e26dadf995df34b5bfde3d04d45d.mp4"
+  "https://static.vecteezy.com/system/resources/previews/070/733/594/mp4/blue-door-animation-opening-and-closing-on-white-wall-with-transparent-background-free-video.mp4",
+  "https://cdn.pixabay.com/video/2021/09/22/89273-614024119_tiny.mp4",
+  "https://cdn.pixabay.com/video/2025/04/07/270544_tiny.mp4"
 ];
-// "https://cdn.pixabay.com/video/2021/04/22/71902-540475455_large.mp4",
-// "https://cdn.pixabay.com/video/2023/11/14/189046-884476411_large.mp4",
-// "https://cdn.pixabay.com/video/2020/06/20/42670-432087053_tiny.mp4",,
+
 const Banner = () => {
   const [current, setCurrent] = useState(0);
 
@@ -30,17 +28,17 @@ const Banner = () => {
         {/* Carousel slides */}
         <div
           className="flex transition-transform duration-700 ease-in-out"
-        style={{ transform: `translateX(-${current * 100}%)` }}
+          style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {videos.map((src, i) => (
-            <div key={i} className="w-full shrink-0 relative">
+            <div key={i} className="w-full shrink-0 relative h-[55vh]">
               <video
                 src={src}
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="w-full h-[60vh] object-cover brightness-90"
+                className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
             </div>
@@ -78,4 +76,4 @@ const Banner = () => {
   );
 };
 
-export default Banner;
+export default Banner;

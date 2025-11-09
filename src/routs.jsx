@@ -5,6 +5,7 @@ import ErrorPage from "./MainLayout/ErrorPage";
 import Homes from "./pages/Home";
 import Login from "./Auth/Login";
 import Register from "./Auth/Registartion";
+import ALLModuls from "./pages/ALL Moduls";
 
 export const router = createBrowserRouter([
   {
@@ -13,8 +14,13 @@ export const router = createBrowserRouter([
     children:[
      {
         path:"/",
-        
+        loader: () =>fetch("http://localhost:3000/letst"),
         element:<Homes></Homes>
+     },
+     {
+      path:"/allmodels",
+      loader:( ) => fetch("http://localhost:3000/product"),
+      element:<ALLModuls></ALLModuls>
      }
     ]
   },

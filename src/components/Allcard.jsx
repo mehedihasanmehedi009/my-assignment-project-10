@@ -1,10 +1,10 @@
- import { Link } from "react-router";
+import React from 'react';
+import { Link } from 'react-router';
 
-export const ModelCard = ({ model }) => {
+const Allcard = ({model}) => {
   const { title, imageURL, category, description, _id, created_by } = model;
-
-  return (
-    <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ">
+    return (
+             <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 ">
       <figure className="h-48 overflow-hidden">
         <img
           src={imageURL}
@@ -32,5 +32,7 @@ export const ModelCard = ({ model }) => {
         </div>
       </div>
     </div>
-  );
+    );
 };
+
+export default Allcard;

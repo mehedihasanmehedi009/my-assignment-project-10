@@ -7,7 +7,7 @@ const Header = () => {
   const { user, signOutUser } = useContext(AuthContext);
 
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="navbar bg-base-100 shadow-sm md:w-8/12 mx-auto mb-5 rounded-full">
       {/* Left */}
       <div className="navbar-start">
         <div className="dropdown">
@@ -31,9 +31,11 @@ const Header = () => {
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-            <li><a>Home</a></li>
-            <li><a>Services</a></li>
-            <li><a>Contact</a></li>
+          <li><Link to="/" >Home</Link ></li>
+          <li><Link to="/allmodels">Explore Artworks</Link></li>
+            <li><Link to="/" >Add Artwork</Link ></li>
+              <li><Link to="/" > My Gallery</Link ></li>
+                <li><Link to="/" >My Favorites</Link ></li>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl font-bold">My App</a>
@@ -42,9 +44,11 @@ const Header = () => {
       {/* Center */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><a>Home</a></li>
-          <li><a>Services</a></li>
-          <li><a>About</a></li>
+          <li><Link to="/" >Home</Link ></li>
+          <li><Link to="/allmodels">Explore Artworks</Link></li>
+            <li><Link to="/" >Add Artwork</Link ></li>
+              <li><Link to="/" > My Gallery</Link ></li>
+                <li><Link to="/" >My Favorites</Link ></li>
         </ul>
       </div>
 
@@ -79,12 +83,20 @@ const Header = () => {
             </div>
           </div>
         ) : (
+          <>
           <Link
             to="/login"
             className="btn btn-sm bg-gradient-to-r from-pink-500 to-green-400 text-white"
           >
             <IoLogIn /> Login
           </Link>
+          <Link
+            to="/register"
+            className="btn btn-sm bg-gradient-to-r from-pink-500 to-green-400 text-white"
+          >
+            <IoLogIn /> register
+          </Link>
+          </>
         )}
       </div>
     </div>
