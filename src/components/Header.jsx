@@ -2,12 +2,13 @@
 import { Link } from "react-router";
 import { IoLogOut, IoLogIn } from "react-icons/io5";
 import { AuthContext } from "../context/Authprovider";
+import { NavLink } from "react-router";
 
 const Header = () => {
   const { user, signOutUser } = useContext(AuthContext);
 
   return (
-    <div className="navbar bg-base-100 shadow-sm md:w-8/12 mx-auto mb-5 rounded-full">
+    <div className="navbar bg-base-100 shadow-sm  rounded-full md:w-8/12 mx-auto">
       {/* Left */}
       <div className="navbar-start">
         <div className="dropdown">
@@ -31,11 +32,9 @@ const Header = () => {
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
-          <li><Link to="/" >Home</Link ></li>
-          <li><Link to="/allmodels">Explore Artworks</Link></li>
-            <li><Link to="/" >Add Artwork</Link ></li>
-              <li><Link to="/" > My Gallery</Link ></li>
-                <li><Link to="/" >My Favorites</Link ></li>
+            <li><a>Home</a></li>
+            <li><a>Services</a></li>
+            <li><a>Contact</a></li>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl font-bold">My App</a>
@@ -44,11 +43,11 @@ const Header = () => {
       {/* Center */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><Link to="/" >Home</Link ></li>
-          <li><Link to="/allmodels">Explore Artworks</Link></li>
-            <li><Link to="/" >Add Artwork</Link ></li>
-              <li><Link to="/" > My Gallery</Link ></li>
-                <li><Link to="/" >My Favorites</Link ></li>
+          <li><NavLink to="/" >Home</NavLink ></li>
+          <li><NavLink to="/allmodels">Explore Artworks</NavLink></li>
+          <li><NavLink to="/" >Add Artwork</NavLink ></li>
+          <li><NavLink to="/" > My Gallery</NavLink ></li>
+          <li><NavLink to="/" >My Favorites</NavLink ></li>
         </ul>
       </div>
 

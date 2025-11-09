@@ -31,7 +31,7 @@ const Banner = () => {
           style={{ transform: `translateX(-${current * 100}%)` }}
         >
           {videos.map((src, i) => (
-            <div key={i} className="w-full shrink-0 relative h-[55vh]">
+            <div key={i} className="w-full shrink-0 relative h-[58vh]">
               <video
                 src={src}
                 autoPlay
