@@ -61,7 +61,7 @@ if (!/[a-z]/.test(password)) {
 
   return (
   <div>
-    <Header></Header>
+  
       <div className="flex items-center justify-center min-h-screen bg-base-200">
   
       <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl border border-gray-200">
@@ -130,7 +130,7 @@ if (!/[a-z]/.test(password)) {
         </div>
       </div>
     </div>
-    <Footer></Footer>
+ 
   </div>
   );
 };
