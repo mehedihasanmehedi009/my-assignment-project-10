@@ -22,7 +22,7 @@ const Homes = () => {
       {
         name: "Rifat Khan",
         image: "https://img.freepik.com/free-photo/handsome-young-cheerful-man-with-arms-crossed_171337-1073.jpg?semt=ais_hybrid&w=740&q=80",
-        specialty: "Door Modeling",
+        specialty: "UX/UI Modeling",
       },
       {
         name: "Tanjim Alam",
@@ -30,27 +30,14 @@ const Homes = () => {
         specialty: "Character Design",
       },
   ];
-
-  const highlights = [
-    {
-      title: "Community Art Challenge",
-      desc: "Join our November art challenge and showcase your creativity!",
-      image: "https://i.ibb.co.com/kcmnM5y/art-event.jpg",
-    },
-    {
-      title: "New Artist Meetup",
-      desc: "Our community meetup featured 20+ amazing digital artists.",
-      image: "https://i.ibb.co.com/CB8qPQX/community.jpg",
-    },
-  ];
-
+ 
   return (
     <div>
       <Banner />
 
       {/* Latest Models Section */}
   <div className=" p-5  mt-20 text-center text-3xl md:text-5xl font-bold text-gray-600 ">
-        Latest Doors
+        Latest  Arts 
       </div>
       <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10  w-8/12 mx-auto">
         {data?.length > 0 ? (

@@ -20,9 +20,10 @@ export const ModelCard = ({ model }) => {
           {category}
         </div>
 
-        <div className="text-lg text-pink-500">{artist_name}</div>
+        <div className="text-lg text-pink-500">{ artist_name}</div>
 
-        <p className="line-clamp-1 font-semibold text-sm">{description}</p>
+         <p className="line-clamp-1 font-semibold text-sm">{description}</p>
+
 
         <div className="card-actions justify-between items-center mt-4">
           <Link

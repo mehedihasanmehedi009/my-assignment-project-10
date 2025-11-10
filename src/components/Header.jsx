@@ -43,7 +43,7 @@ const Header = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow "
           >
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/allmodels">Explore Artworks</NavLink></li>
@@ -52,7 +52,7 @@ const Header = () => {
             <li><NavLink to="/favorits">My Favorites</NavLink></li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl font-bold">My App</a>
+        <a className=" text-xl font-bold"></a>
       </div>
 
       {/* Center */}
@@ -116,15 +116,6 @@ const Header = () => {
             onChange={(e) => handleTheme(e.target.checked)}
             checked={theme === "dark"} 
           />
-
-          {/* sun icon (light mode) */}
-          {/* <svg
-            className="swap-off h-10 w-10 fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5Z" />
-          </svg> */}
            <svg
            className="swap-off h-10 w-10 fill-current"
            xmlns="http://www.w3.org/2000/svg"

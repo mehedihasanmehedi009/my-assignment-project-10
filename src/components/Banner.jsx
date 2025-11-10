@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 
 const videos = [
-  "https://static.vecteezy.com/system/resources/previews/070/733/594/mp4/blue-door-animation-opening-and-closing-on-white-wall-with-transparent-background-free-video.mp4",
-  "https://cdn.pixabay.com/video/2021/09/22/89273-614024119_tiny.mp4",
+  " https://cdn.pixabay.com/video/2019/10/10/27727-365890985_tiny.mp4",
+  "https://cdn.pixabay.com/video/2019/04/07/22667-329952712_tiny.mp4",
   "https://cdn.pixabay.com/video/2025/04/07/270544_tiny.mp4"
 ];
 

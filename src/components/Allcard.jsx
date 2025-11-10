@@ -1,29 +1,40 @@
-import React from 'react';
+ import React from 'react';
 import { Link } from 'react-router';
 
-const Allcard = ({model}) => {
-  const { title, imageURL, category, description, _id,  artist_name } = model;
-    return (
-              <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-      <figure className="overflow-hidden h-44"> {/* fixed image height */}
+const Allcard = ({ model }) => {
+  const {
+    title,
+    imageURL,
+    category,
+    description,
+    _id,
+    like
+  } = model;
+
+  return (
+    <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+          <figure className="overflow-hidden h-44"> {/* fixed image height */}
         <img
           src={imageURL}
           alt={title}
           className="w-full h-full object-cover hover:scale-110 transition-transform duration-300"
         />
       </figure>
-
       <div className="card-body">
         <h2 className="card-title text-2xl">{title}</h2>
 
-        <div className="badge text-lg badge-secondary rounded-full">
-          {category}
-        </div>
-
-        <div className="text-lg text-pink-500">{artist_name}</div>
+       
+          <div className="badge text-lg bg-pink-300 rounded-full">
+            {category}
+          </div>
+           <div className="badge text-lg bg-gray-400 rounded-full  ">
+           👍 {like}
+          </div>
+    
 
         <p className="line-clamp-1 font-semibold text-sm">{description}</p>
-
+          
+        {/* View Details Button */}
         <div className="card-actions justify-between items-center mt-4">
           <Link
             to={`/alldatiels/${_id}`}
@@ -32,9 +43,12 @@ const Allcard = ({model}) => {
             <span className="text-[18px]">View Details</span>
           </Link>
         </div>
+
+    
+ 
       </div>
     </div>
-    );
+  );
 };
 
 export default Allcard;
