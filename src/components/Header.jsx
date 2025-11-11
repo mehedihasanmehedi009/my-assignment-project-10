@@ -21,7 +21,7 @@ const Header = () => {
   const { user, signOutUser } = useContext(AuthContext);
 
   return (
-    <div className="navbar bg-base-100 shadow-sm rounded-full md:w-8/12 mx-auto">
+    <div className="navbar bg-base-100 shadow-sm rounded-full md:w-9/12 mx-auto">
       {/* Left */}
       <div className="navbar-start">
         <div className="dropdown">

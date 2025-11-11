@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Swal from 'sweetalert2';
 
 const Gallary = ({model}) => {
       const {
@@ -10,10 +11,44 @@ const Gallary = ({model}) => {
     _id,
     like
   } = model;
+  const handleDelete = () => {
+  fetch(`http://localhost:3000/mygallry/${model._id}`, {
+    method: "DELETE"
+  })
+    .then(res => res.json())
+    .then(data => {
+      if (data.deletedCount > 0) {
+        Swal.fire("Deleted!", "Your artwork has been deleted.", "success");
+      }
+    });
+
+};
+// const handleUpdate = () => {
+//   const updated = {
+//     title: "New Title",
+//     description: "Updated description",
+//     imageURL: "https://new-image.com",
+//     category: "Digital Art"
+//   };
+
+//   fetch(`http://localhost:3000/mygallry/${model._id}`, {
+//     method: "PUT",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify(updated)
+//   })
+//     .then(res => res.json())
+//     .then(data => {
+//       if (data.modifiedCount > 0) {
+//         Swal.fire("Updated!", "Your artwork has been updated.", "success");
+//       }
+//     });
+// };
+
+
     return (
         <div>
             <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-          <figure className="overflow-hidden h-44"> {/* fixed image height */}
+          <figure className="overflow-hidden h-44"> 
         <img
           src={imageURL}
           alt={title}
@@ -43,9 +78,12 @@ const Gallary = ({model}) => {
             <span className="text-[18px]">View Details</span>
           </Link>
         </div>
-        <div className='flex justify-between'> 
-            <h1 className='btn btn-sm  rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white'> Update card</h1>
-            <h1 className='btn btn-sm  rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white'>Delete card</h1>
+        <div  
+        // onClick={handleUpdate } 
+        className='flex justify-between'> 
+              <Link to="/update" className='btn btn-sm  rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white'> Update card
+              </Link>
+            <h1 onClick={handleDelete} className='btn btn-sm  rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white'>Delete card</h1>
         </div>
 
     

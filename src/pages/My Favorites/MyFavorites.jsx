@@ -11,9 +11,11 @@ const MyFavorites = () => {
       })
 
      },[])
+
+     
     return (
      <div>
-         <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 w-8/12 mx-auto">
+         <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 w-9/12 mx-auto">
     {card?.length > 0 ? (
       card.map((model) =>  <Favorits key={model._id} model={model}></Favorits>)
     ) : (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router';
+import Swal from 'sweetalert2';
 
 const Favorits = ({model}) => {
     const {
@@ -7,9 +7,36 @@ const Favorits = ({model}) => {
     imageURL,
     category,
     description,
-    _id,
+
     like
   } = model;
+  const hendels = () =>{
+            
+ Swal.fire({
+  title: "Are you sure?",
+  text: "You won't be able to revert this!",
+  icon: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#3085d6",
+  cancelButtonColor: "#d33",
+  confirmButtonText: "Yes, delete it!"
+}).then((result) => {
+  if (result.isConfirmed) {
+     fetch(`http://localhost:3000/MyFavorites/${model._id}`, {
+            method: "DELETE",
+            headers: { "Content-Type": "application/json" }
+          })
+          .then(res=>res.json())
+          .then(data=>{
+            Swal.fire({
+      title: "Deleted!",
+      text: "Your file has been deleted.",
+      icon: "success"
+    });
+  console.log(data)
+ })}
+})}
+
     return (
         <div>
             <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
@@ -38,7 +65,7 @@ const Favorits = ({model}) => {
         <div className="card-actions justify-between items-center mt-4">
          
         </div>
-        <div className='items-center'> 
+        <div onClick={hendels} className='items-center'> 
             <h1 className="btn btn-sm w-full rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white">UnFavorits</h1>
         </div>
 

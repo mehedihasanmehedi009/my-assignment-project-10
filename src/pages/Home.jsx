@@ -39,7 +39,7 @@ const Homes = () => {
   <div className=" p-5  mt-20 text-center text-3xl md:text-5xl font-bold text-gray-600 ">
         Latest  Arts 
       </div>
-      <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10  w-8/12 mx-auto">
+      <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10  w-9/12 mx-auto">
         {data?.length > 0 ? (
           data.map((model) => <ModelCard key={model._id} model={model} />)
         ) : (
@@ -52,7 +52,7 @@ const Homes = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-10 text-pink-600">
           🎨 Top Artists of the Week
         </h2>
-        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 w-8/12 mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 w-9/12 mx-auto">
           {topArtists.map((artist, i) => (
             <div
               key={i}

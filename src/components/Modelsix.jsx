@@ -23,8 +23,7 @@ export const ModelCard = ({ model }) => {
           {category}
         </div>
 
-        <div className="text-lg text-pink-500">{ artist_name || user.
-displayName}</div>
+        <div className="text-lg text-pink-500">{ artist_name || user?.displayName}</div>
 
          <p className="line-clamp-1 font-semibold text-sm">{description}</p>
 

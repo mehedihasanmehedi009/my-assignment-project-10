@@ -10,12 +10,13 @@ import AddArtwork from "./pages/Adddoors/AddArtwork";
 import MyGallery from "./pages/My Galary/MyGallery";
 import MyFavorites from "./pages/My Favorites/MyFavorites";
 import PrivateRoute from "./PrivetRout/PrivetRout";
+import UPDeteGallary from "./pages/Updete/UPDeteGallary";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout />,
-    errorElement: <ErrorPage />, // ✅ loader বা route error ধরবে
+    errorElement: <ErrorPage />, 
     children: [
       {
         path: "/",
@@ -50,6 +51,10 @@ export const router = createBrowserRouter([
             <MyGallery />
           </PrivateRoute>
         ),
+      },
+      {
+        path:"/update",
+        element:<UPDeteGallary></UPDeteGallary>
       },
       {
         path: "/favorits",

@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../context/Authprovider';
-import Allcard from '../../components/Allcard';
 import Gallary from './Gallary';
  
 
@@ -17,7 +16,7 @@ const MyGallery = () => {
         )
       },[user])
     return (
-           <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 w-8/12 mx-auto">
+           <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 w-9/12 mx-auto">
     {arts?.length > 0 ? (
       arts.map((model) => <Gallary key={model._id} model={model}
       ></Gallary>)
