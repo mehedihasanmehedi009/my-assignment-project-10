@@ -12,7 +12,9 @@ const Allcard = ({ model }) => {
   } = model;
 
   return (
+    
     <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+         
           <figure className="overflow-hidden h-44"> {/* fixed image height */}
         <img
           src={imageURL}
@@ -32,7 +34,7 @@ const Allcard = ({ model }) => {
           </div>
     
 
-        {/* <p className="line-clamp-1 font-semibold text-sm">{description}</p> */}
+        <p className="line-clamp-1 font-semibold text-sm">{description}</p>
           
         {/* View Details Button */}
         <div className="card-actions justify-between items-center mt-4">

@@ -23,7 +23,7 @@ const Banner = () => {
   const nextSlide = () => setCurrent((current + 1) % videos.length);
 
   return (
-    <div className="w-8/12 mx-auto flex justify-center p-4 relative">
+    <div className="w-9/12 mx-auto flex justify-center p-4 relative">
       <div className="max-w-7xl w-full relative overflow-hidden bg-black rounded-2xl shadow-2xl">
         {/* Carousel slides */}
         <div
