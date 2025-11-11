@@ -24,7 +24,7 @@ const Favorits = ({model}) => {
         <h2 className="card-title text-2xl">{title}</h2>
 
        
-          <div className="badge text-lg bg-pink-300 rounded-full">
+          <div className="badge  bg-pink-300 rounded-full">
             {category}
           </div>
            <div className="badge text-lg bg-gray-400 rounded-full  ">
@@ -36,15 +36,10 @@ const Favorits = ({model}) => {
           
         {/* View Details Button */}
         <div className="card-actions justify-between items-center mt-4">
-          {/* <Link
-            to={`/alldatiels/${_id}`}
-            className="btn btn-sm w-full rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white"
-          >
-            <span className="text-[18px]">View Details</span>
-          </Link> */}
+         
         </div>
         <div className='items-center'> 
-            <h1              className="btn btn-sm w-full rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white">UnFavorits</h1>
+            <h1 className="btn btn-sm w-full rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white">UnFavorits</h1>
         </div>
 
     

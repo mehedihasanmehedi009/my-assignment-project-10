@@ -32,7 +32,7 @@ const Allcard = ({ model }) => {
           </div>
     
 
-        <p className="line-clamp-1 font-semibold text-sm">{description}</p>
+        {/* <p className="line-clamp-1 font-semibold text-sm">{description}</p> */}
           
         {/* View Details Button */}
         <div className="card-actions justify-between items-center mt-4">

@@ -89,12 +89,12 @@ const hendelFavorites = async () => {
     {/* Artist Info */}
     <div className="flex items-center gap-4 mt-4">
       <img
-        src={product.photo || "https://via.placeholder.com/64"}
+        src={product.photo ||  user.photoURL  || "https://via.placeholder.com/64"}
         alt={product.artist_name || "Artist"}
         className="w-16 h-16 rounded-full object-cover"
       />
       <div className="flex flex-col">
-        <span className="font-semibold text-gray-900 dark:text-white">{product.artist_name || "Unknown Artist"}</span>
+        <span className="font-semibold text-gray-900 dark:text-white">{product.artist_name || user.displayName ||   "Unknown Artist"}</span>
         <span className="text-sm text-gray-500 dark:text-gray-300">Total artworks: {product.totalArtworks ?? "—"}</span>
       </div>
     </div>

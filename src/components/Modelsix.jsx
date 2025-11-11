@@ -1,6 +1,9 @@
- import { Link } from "react-router";
+ import { useContext } from "react";
+import { Link } from "react-router";
+import { AuthContext } from "../context/Authprovider";
 
 export const ModelCard = ({ model }) => {
+  const {user} = useContext(AuthContext)
   const { title, imageURL, category, description, _id, artist_name } = model;
 
   return (
@@ -20,7 +23,8 @@ export const ModelCard = ({ model }) => {
           {category}
         </div>
 
-        <div className="text-lg text-pink-500">{ artist_name}</div>
+        <div className="text-lg text-pink-500">{ artist_name || user.
+displayName}</div>
 
          <p className="line-clamp-1 font-semibold text-sm">{description}</p>
 
