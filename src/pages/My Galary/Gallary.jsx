@@ -1,8 +1,8 @@
- import React from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 
-const Allcard = ({ model }) => {
-  const {
+const Gallary = ({model}) => {
+      const {
     title,
     imageURL,
     category,
@@ -10,9 +10,9 @@ const Allcard = ({ model }) => {
     _id,
     like
   } = model;
-
-  return (
-    <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+    return (
+        <div>
+            <div className="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
           <figure className="overflow-hidden h-44"> {/* fixed image height */}
         <img
           src={imageURL}
@@ -24,7 +24,7 @@ const Allcard = ({ model }) => {
         <h2 className="card-title text-2xl">{title}</h2>
 
        
-          <div className="badge  bg-pink-300 rounded-full">
+          <div className="badge text-lg bg-pink-300 rounded-full">
             {category}
           </div>
            <div className="badge text-lg bg-gray-400 rounded-full  ">
@@ -43,12 +43,17 @@ const Allcard = ({ model }) => {
             <span className="text-[18px]">View Details</span>
           </Link>
         </div>
+        <div className='flex justify-between'> 
+            <h1 className='btn btn-sm  rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white'> Update card</h1>
+            <h1 className='btn btn-sm  rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white'>Delete card</h1>
+        </div>
 
     
  
       </div>
     </div>
-  );
+        </div>
+    );
 };
 
-export default Allcard;
+export default Gallary;

@@ -12,7 +12,7 @@ const ALLModuls = () => {
    <span className='text-2xl font-semibold text-gray-500'> Explore All Arts</span>
   </div>
 
-  <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 w-8/12 mx-auto">
+  <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10 w-9/12 mx-auto">
     {data?.length > 0 ? (
       data.map((model) => <Allcard key={model._id} model={model} />)
     ) : (

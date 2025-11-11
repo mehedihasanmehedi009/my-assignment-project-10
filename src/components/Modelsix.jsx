@@ -16,7 +16,7 @@ export const ModelCard = ({ model }) => {
       <div className="card-body">
         <h2 className="card-title text-2xl">{title}</h2>
 
-        <div className="badge text-lg badge-secondary rounded-full">
+        <div className="badge  badge-secondary rounded-full">
           {category}
         </div>
 

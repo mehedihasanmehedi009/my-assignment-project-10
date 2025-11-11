@@ -70,6 +70,7 @@ const Header = () => {
       <div className="navbar-end flex items-center gap-3 md:mr-5">
         {user ? (
           <div className="relative group">
+            {/* <img src="https://lh3.googleusercontent.com/a/ACg8ocL-5bM7i3qb16gI7R2HUW0C9vepMUcptvL_kcrermIfaUGlGXU=s96-c" alt="" /> */}
             <img
               src={user.photoURL || "https://i.ibb.co/5GzXkwq/user.png"}
               alt="User Avatar"

@@ -61,12 +61,12 @@ const AddArtwork = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             {/* Name */}
             <div>
-              <label className="label font-medium text-gray-900 dark:text-gray-200">Name</label>
+              <label className="label font-medium text-gray-900 dark:text-gray-200">Title</label>
               <input
                 type="text"
                 name="title"
                 required
-                placeholder="Enter name"
+                placeholder="Enter Title"
                 className="input w-full rounded-full focus:outline-none focus:ring-2 focus:ring-pink-400 bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
               />
             </div>
