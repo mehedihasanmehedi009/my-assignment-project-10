@@ -36,7 +36,7 @@ const Homes = () => {
       <Banner />
 
       {/* Latest Models Section */}
-  <div className=" p-5  mt-20 text-center text-3xl md:text-5xl font-bold text-gray-600 ">
+  <div className=" p-8 text-center text-2xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
         Latest  Arts 
       </div>
       <div className="p-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-10  w-9/12 mx-auto">
@@ -49,7 +49,7 @@ const Homes = () => {
 
       {/* 🔹 Top Artists of the Week Section */}
       <section className="my-20 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-pink-600">
+        <h2 className=" text-2xl p-4 md:text-5xl mb-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
           🎨 Top Artists of the Week
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8 w-9/12 mx-auto">
@@ -73,8 +73,8 @@ const Homes = () => {
       </section>
 
       {/* 🔹 Community Highlights Section */}
- <section className="my-20 text-center bg-gradient-to-r from-blue-100 to-pink-100 py-16">
-  <h2 className="text-3xl md:text-4xl font-bold mb-10 text-blue-700">
+ <section className="my-20 text-center bg-gradient-to-r  drak:from-blue-100 to-pink-100 py-16">
+  <h2 className=" text-2xl p-4 md:text-5xl mb-4 font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">
     💬 Community Highlights
   </h2>
 
