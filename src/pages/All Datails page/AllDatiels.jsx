@@ -1,5 +1,5 @@
  import { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { Navigate, useParams } from "react-router";
 import { AuthContext } from "../../context/Authprovider";
 import { toast } from "react-toastify";
  
@@ -14,44 +14,22 @@ const AllDatiels = () => {
       .then((res) => res.json())
       .then((data) => setProduct(data))
       .catch((err) => console.error(err));
-  }, [id]);
+  }, []);
    
- 
-
-const [isUploading, setIsUploading] = useState(false);
-
-const hendelFavorites = async () => {
-  if (isUploading) {
-    toast.info("Already uploading, please wait!");
-    return;
-  }
-
-  setIsUploading(true); // prevent fast clicks
-
-  try {
-    const res = await fetch("http://localhost:3000/MyFavorites", {
+ const hendelFavorites = async () => {
+    const { _id, ...productData } = product;
+      fetch("http://localhost:3000/MyFavorites", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(product),
-    });
+      body: JSON.stringify(productData),  
+    })
+    .then(res=>   res.json())
+    .then(data=>{
+      console.log(data)
+      toast.success("Operation successful!")
 
-    const data = await res.json();
-
-    if (data.exists) {
-      toast.info("Already added to favorites!");
-    } else {
-      toast.success("Added to favorites successfully!");
-    }
-
-    console.log(data);
-  } catch (error) {
-    console.error("Error adding favorite:", error);
-    toast.error("Something went wrong!");
-  } finally {
-    setIsUploading(false); 
+    })
   }
-};
-
   return (
    <div className="min-h-screen bg-white dark:bg-gray-900 p-6 flex flex-col items-center">
   {/* Image */}
@@ -79,6 +57,7 @@ const hendelFavorites = async () => {
       </button>
 
       <button
+      
         onClick={hendelFavorites}
         className="flex-1 px-4 py-2 rounded bg-yellow-500 text-black hover:bg-yellow-600 disabled:opacity-50"
       >

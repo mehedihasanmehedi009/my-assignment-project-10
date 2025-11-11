@@ -23,8 +23,8 @@ const Footer = () => {
           <ul className="space-y-1 text-gray-700 dark:text-gray-400">
             <li><Link to="/">Home</Link></li>
             <li><Link to="/gallery">Gallery</Link></li>
-            <li><Link to="/upload">Upload</Link></li>
-            <li><Link to="/about">About</Link></li>
+            <li><Link to="/addarts">Upload</Link></li>
+            <li><Link to="/">About</Link></li>
           </ul>
         </div>
 

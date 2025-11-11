@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
 
-const Gallary = ({model}) => {
+const Gallary = ({model, oneclick}) => {
       const {
     title,
     imageURL,
@@ -11,18 +11,7 @@ const Gallary = ({model}) => {
     _id,
     like
   } = model;
-  const handleDelete = () => {
-  fetch(`http://localhost:3000/mygallry/${model._id}`, {
-    method: "DELETE"
-  })
-    .then(res => res.json())
-    .then(data => {
-      if (data.deletedCount > 0) {
-        Swal.fire("Deleted!", "Your artwork has been deleted.", "success");
-      }
-    });
 
-};
 // const handleUpdate = () => {
 //   const updated = {
 //     title: "New Title",
@@ -83,7 +72,7 @@ const Gallary = ({model}) => {
         className='flex justify-between'> 
               <Link to="/update" className='btn btn-sm  rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white'> Update card
               </Link>
-            <h1 onClick={handleDelete} className='btn btn-sm  rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white'>Delete card</h1>
+            <h1 onClick={oneclick} className='btn btn-sm  rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white'>Delete card</h1>
         </div>
 
     
