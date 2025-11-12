@@ -12,27 +12,7 @@ const Gallary = ({model, oneclick}) => {
     like
   } = model;
 
-// const handleUpdate = () => {
-//   const updated = {
-//     title: "New Title",
-//     description: "Updated description",
-//     imageURL: "https://new-image.com",
-//     category: "Digital Art"
-//   };
-
-//   fetch(`http://localhost:3000/mygallry/${model._id}`, {
-//     method: "PUT",
-//     headers: { "Content-Type": "application/json" },
-//     body: JSON.stringify(updated)
-//   })
-//     .then(res => res.json())
-//     .then(data => {
-//       if (data.modifiedCount > 0) {
-//         Swal.fire("Updated!", "Your artwork has been updated.", "success");
-//       }
-//     });
-// };
-
+ 
 
     return (
         <div>
@@ -70,7 +50,7 @@ const Gallary = ({model, oneclick}) => {
         <div  
         // onClick={handleUpdate } 
         className='flex justify-between'> 
-              <Link to="/update" className='btn btn-sm  rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white'> Update card
+              <Link to={`/update/${model._id}`} className='btn btn-sm  rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white'> Update card
               </Link>
             <h1 onClick={oneclick} className='btn btn-sm  rounded-full h-10 bg-gradient-to-r from-pink-500 to-green-400 hover:from-red-600 hover:to-pink-500 text-white'>Delete card</h1>
         </div>

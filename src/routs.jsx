@@ -53,8 +53,11 @@ export const router = createBrowserRouter([
         ),
       },
       {
-        path:"/update",
-        element:<UPDeteGallary></UPDeteGallary>
+        path:"/update/:id",
+        element:<PrivateRoute><UPDeteGallary></UPDeteGallary></PrivateRoute>,
+         loader: ({ params }) => fetch(`http://localhost:3000/mygallry/${params.id}`)
+
+
       },
       {
         path: "/favorits",

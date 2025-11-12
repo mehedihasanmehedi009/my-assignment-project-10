@@ -55,7 +55,7 @@ const AddArtwork = () => {
       <div className="card w-full max-w-md bg-gray-100 dark:bg-gray-800 shadow-2xl rounded-2xl border border-gray-200 dark:border-gray-700">
         <div className="card-body p-6">
           <h2 className="text-2xl font-bold text-center mb-6 text-gray-900 dark:text-white">
-            Add New Model
+            Add New Card
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-4">

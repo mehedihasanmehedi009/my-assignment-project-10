@@ -45,24 +45,24 @@ const Header = () => {
             tabIndex="-1"
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow "
           >
-            <li><NavLink to="/">Home</NavLink></li>
-            <li><NavLink to="/allmodels">Explore Artworks</NavLink></li>
-            <li><NavLink to="/addarts">Add Artwork</NavLink></li>
-            <li><NavLink to="/gallery">My Gallery</NavLink></li>
-            <li><NavLink to="/favorits">My Favorites</NavLink></li>
+            <li><NavLink className='font-semibold ' to="/">Home</NavLink></li>
+            <li><NavLink className='font-semibold ' to="/allmodels">Explore Artworks</NavLink></li>
+            <li><NavLink className='font-semibold ' to="/addarts">Add Artwork</NavLink></li>
+            <li><NavLink className='font-semibold ' to="/gallery">My Gallery</NavLink></li>
+            <li><NavLink className='font-semibold ' to="/favorits">My Favorites</NavLink></li>
           </ul>
         </div>
-        <a className=" text-xl font-bold"></a>
+        <a className=" text-xl font-bold ml-4">ARTIFY Web</a>
       </div>
 
       {/* Center */}
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="/allmodels">Explore Artworks</NavLink></li>
-          <li><NavLink to="/addarts">Add Artwork</NavLink></li>
-          <li><NavLink to="/gallery">My Gallery</NavLink></li>
-          <li><NavLink to="/favorits">My Favorites</NavLink></li>
+          <li><NavLink className='font-semibold ' to="/">Home</NavLink></li>
+          <li><NavLink className='font-semibold ' to="/allmodels">Explore Artworks</NavLink></li>
+          <li><NavLink className='font-semibold ' to="/addarts">Add Artwork</NavLink></li>
+          <li><NavLink className='font-semibold ' to="/gallery">My Gallery</NavLink></li>
+          <li><NavLink className='font-semibold ' to="/favorits">My Favorites</NavLink></li>
         </ul>
       </div>
 
